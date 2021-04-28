@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,100;1,700&display=swap");
+:root {
+  --yellow: #b58b6a;
+  --white: #ccd5e2;
+  --gray: #253245;
+  --width: 10px;
+  --font-big: 18px;
+  --font-normal: 13px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background-color: var(--gray);
+}
+
+body {
+  color: var(--white);
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--gray);
+  padding: calc(var(--width) * 2.5) calc(var(--width) * 2);
+}
+
+.title {
+  font-size: var(--font-big);
+  display: flex;
+  justify-content: flex-start;
+}
+
+.title i {
+  color: var(--yellow);
+  margin-right: var(--width);
+}
+
+.btns {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: var(--font-normal);
+}
+
+.btn {
+  padding: var(--width);
+}
+
+.icons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.icons-btn {
+  margin-right: var(--width);
+  color: var(--width);
+}
+
+.mobile-bar {
+  display: none;
+  color: var(--yellow);
+}
+
+@media screen and (max-width: 600px) {
+  .mobile-bar {
+    display: block;
+    position: absolute;
+    top: calc(var(--width) * 2);
+    right: calc(2 * var(--width));
+  }
+
+  header {
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+  }
+
+  .title {
+    position: absolute;
+    top: calc(var(--width) * 0.7);
+    left: calc(3 * var(--width));
+  }
+
+  .title i {
+    position: absolute;
+    top: calc(var(--width) * 0.8);
+  }
+
+  .btns {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: calc(var(--width) * 3);
+  }
+  .icons {
+    justify-content: center;
+  }
+  .icons .fa-twitter {
+    margin-left: calc(var(--width) * 1.5);
+  }
+
+  .removing {
+    display: none;
+  }
+}
