@@ -43,6 +43,7 @@ header {
 .title {
   font-size: var(--font-big);
   display: flex;
+  flex: 1 1 20%;
   justify-content: flex-start;
 }
 
@@ -77,18 +78,29 @@ header {
   color: var(--yellow);
 }
 
+.btnsAndIcons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 @media screen and (max-width: 600px) {
   .mobile-bar {
     display: block;
     position: absolute;
     top: calc(var(--width) * 2);
     right: calc(2 * var(--width));
+    cursor: pointer;
   }
 
   header {
     flex-direction: column;
     justify-self: center;
     align-items: center;
+  }
+
+  .btnsAndIcons {
+    flex-direction: column;
   }
 
   .title {
